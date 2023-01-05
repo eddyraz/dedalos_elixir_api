@@ -1,0 +1,17 @@
+defmodule DedalosElixirApi.Opac.Libros do
+  use Ecto.Schema
+  import Ecto.Changeset
+
+  schema "opac_libro_legacy" do
+    field :no_reg, :integer
+
+    timestamps()
+  end
+
+  @doc false
+  def changeset(libros, attrs) do
+    libros
+    |> cast(attrs, [:no_reg])
+    |> validate_required([:no_reg])
+  end
+end
