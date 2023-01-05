@@ -1,0 +1,22 @@
+(undo-tree-save-format-version . 1)
+"da39a3ee5e6b4b0d3255bfef95601890afd80709"
+[nil nil nil nil (25526 64106 330400 44000) 0 nil]
+([nil nil ((91 . 92) (t 25526 25380 258616 206000)) nil (25526 64106 330397 600000) 0 nil])
+([nil nil ((108 . 109)) nil (25526 64106 330395 645000) 0 nil])
+([nil nil ((149 . 150)) nil (25526 64106 330390 407000) 0 nil])
+([nil nil ((179 . 180)) nil (25526 64106 330388 521000) 0 nil])
+([nil nil ((199 . 200)) nil (25526 64106 330386 147000) 0 nil])
+([nil nil ((208 . 209)) nil (25526 64106 330383 353000) 0 nil])
+([nil current ((#("defmodule DedalosElixirApi.Repo.Migrations.CreateOpacLibroLegacy do
+  use Ecto.Migration
+
+#  def change do
+#    create table(:opac_libro_legacy) do
+#      add :no_reg, :integer
+
+#      timestamps()
+#    end
+#  end
+end
+" 0 9 (fontified t face font-lock-keyword-face) 9 10 (fontified t) 10 64 (fontified t face font-lock-type-face) 64 65 (fontified t) 65 67 (fontified t face font-lock-keyword-face) 67 70 (fontified t) 70 73 (fontified t face font-lock-keyword-face) 73 74 (fontified t) 74 88 (fontified t face font-lock-type-face) 88 90 (fontified t) 90 93 (fontified t face font-lock-comment-delimiter-face) 93 96 (fontified t face font-lock-comment-face) 96 97 (fontified t face font-lock-comment-face) 97 103 (fontified t face font-lock-comment-face) 103 104 (fontified t face font-lock-comment-face) 104 106 (fontified t face font-lock-comment-face) 106 107 (fontified t face font-lock-comment-face) 107 108 (fontified t face font-lock-comment-delimiter-face) 108 112 (fontified t face font-lock-comment-delimiter-face) 112 125 (fontified t face font-lock-comment-face) 125 143 (fontified t face font-lock-comment-face) 143 145 (fontified t face font-lock-comment-face) 145 147 (fontified t face font-lock-comment-face) 147 148 (fontified t face font-lock-comment-face) 148 149 (fontified t face font-lock-comment-delimiter-face) 149 155 (fontified t face font-lock-comment-delimiter-face) 155 159 (fontified t face font-lock-comment-face) 159 166 (fontified t face font-lock-comment-face) 166 168 (fontified t face font-lock-comment-face) 168 176 (fontified t face font-lock-comment-face) 176 177 (fontified t face font-lock-comment-face) 177 178 (fontified t) 178 185 (fontified t face font-lock-comment-delimiter-face) 185 198 (fontified t face font-lock-comment-face) 198 199 (fontified t face font-lock-comment-delimiter-face) 199 203 (fontified t face font-lock-comment-delimiter-face) 203 206 (fontified t face font-lock-comment-face) 206 207 (fontified t face font-lock-comment-face) 207 208 (fontified t face font-lock-comment-delimiter-face) 208 210 (fontified t face font-lock-comment-delimiter-face) 210 213 (fontified t face font-lock-comment-face) 213 214 (fontified t face font-lock-comment-face) 214 217 (fontified t face font-lock-keyword-face) 217 218 (fontified t)) . -1) (undo-tree-id0 . -218) (undo-tree-id1 . -68) (undo-tree-id2 . -68) (undo-tree-id3 . -89) (undo-tree-id4 . -89) (undo-tree-id5 . -90) (undo-tree-id6 . -90) (undo-tree-id7 . -107) (undo-tree-id8 . -107) (undo-tree-id9 . -148) (undo-tree-id10 . -148) (undo-tree-id11 . -177) (undo-tree-id12 . -177) (undo-tree-id13 . -178) (undo-tree-id14 . -178) (undo-tree-id15 . -198) (undo-tree-id16 . -198) (undo-tree-id17 . -207) (undo-tree-id18 . -207) (undo-tree-id19 . -214) (undo-tree-id20 . -214) (undo-tree-id21 . -218) (undo-tree-id22 . -218) (undo-tree-id23 . -218) (undo-tree-id24 . -218) 219) nil (25526 64106 330377 138000) 0 nil])
+nil
