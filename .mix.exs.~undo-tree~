@@ -1,5 +1,5 @@
 (undo-tree-save-format-version . 1)
-"25ab03e9d0776e087d342182ef92f8ab07d6cfae"
+"04e341a7abc9372db8aacb75515d29131c1c4cae"
 [nil nil nil nil (25526 58711 61413 325000) 0 nil]
 ([nil nil ((1277 . 1278) (t 25526 4948 599187 575000)) nil (25526 58711 61410 391000) 0 nil])
 ([nil nil ((1278 . 1285)) nil (25526 58711 61408 16000) 0 nil])
@@ -7,5 +7,6 @@
 ([nil nil ((#("]" 0 1 (fontified t rear-nonsticky t)) . -1315) (undo-tree-id1 . -1) (undo-tree-id2 . 1) (undo-tree-id3 . -1) 1316) nil (25526 58711 61402 219000) 0 nil])
 ([nil nil ((#("[" 0 1 (fontified t)) . -1285) (undo-tree-id0 . -1) 1286) nil (25526 58711 61392 859000) 0 nil])
 ([nil nil ((#(" {:ecto_generator, \"~> 9.0.0\"}" 0 1 (fontified t) 1 2 (fontified t) 2 17 (fontified t face elixir-atom-face) 17 19 (fontified t) 19 20 (fontified t syntax-table (15) face font-lock-string-face) 20 28 (fontified t face font-lock-string-face) 28 29 (fontified t syntax-table (15) face font-lock-string-face) 29 30 (fontified t)) . 1284) (undo-tree-id5 . -1) (undo-tree-id6 . -1) (t 25526 58711 72761 102000)) nil (25526 65269 899780 447000) 0 nil])
-([nil current ((#("," 0 1 (fontified t)) . -1277) (undo-tree-id4 . -1) 1278) nil (25526 65269 899773 463000) 0 nil])
+([nil nil ((#("," 0 1 (fontified t)) . -1277) (undo-tree-id4 . -1) 1278) nil (25526 65269 899773 463000) 0 nil])
+([nil current ((#(":" 0 1 (fontified t)) . -230) (undo-tree-id0 . -1) (#("g" 0 1 (face elixir-atom-face fontified t)) . -231) (undo-tree-id1 . -1) (#("e" 0 1 (face elixir-atom-face fontified t)) . -232) (undo-tree-id2 . -1) (#("t" 0 1 (face elixir-atom-face fontified t)) . -233) (undo-tree-id3 . -1) (#("t" 0 1 (face elixir-atom-face fontified t)) . -234) (undo-tree-id4 . -1) (#("e" 0 1 (face elixir-atom-face fontified t)) . -235) (undo-tree-id5 . -1) (#("x" 0 1 (face elixir-atom-face fontified t)) . -236) (undo-tree-id6 . -1) (#("t" 0 1 (face elixir-atom-face fontified t)) . -237) (undo-tree-id7 . -1) 238 (t 25526 65269 900738 388000)) nil (25527 3423 975927 243000) 0 nil])
 nil
