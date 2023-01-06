@@ -3,7 +3,6 @@ defmodule DedalosElixirApi.Opac.Libros do
   import Ecto.Changeset
 
   @primary_key {:no_reg, :integer, autogenerate: false}
-  
 
   schema "opac_libro_legacy" do
     field :signatura, :string
@@ -22,13 +21,13 @@ defmodule DedalosElixirApi.Opac.Libros do
     field :editorial_id, :integer
     field :colección_id, :integer
     field :autor, :string
-    field :autor2, :string 
+    field :autor2, :string
     field :autor2_id, :integer
     field :autor_id, :integer
     field :ciudad,  :string
     field :autor3_id, :integer
-    field :lugar_de_impresión_id,  :integer 
-    
+    field :lugar_de_impresión_id,  :integer
+
 #    timestamps()
   end
 

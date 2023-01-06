@@ -12,7 +12,6 @@ defmodule DedalosElixirApiWeb.LibrosView do
 
   def render("libros.json", %{libros: libros}) do
     %{
-     # id: libros.id,
       no_reg: libros.no_reg,
       signatura: libros.signatura,
       fecha_registro: libros.fecha_registro,
