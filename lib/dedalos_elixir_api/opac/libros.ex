@@ -18,7 +18,6 @@ defmodule DedalosElixirApi.Opac.Libros do
     field :en_reparación, :boolean
     field :isbn,  :string
     field :tipo_soporte_id, :integer
-    field :editorial_id, :integer
     field :colección_id, :integer
     field :autor, :string
     field :autor2, :string
@@ -27,6 +26,11 @@ defmodule DedalosElixirApi.Opac.Libros do
     field :ciudad,  :string
     field :autor3_id, :integer
     field :lugar_de_impresión_id,  :integer
+
+    #Associations
+    belongs_to(:editorial, Editorial.Id)
+
+
 
 #    timestamps()
   end

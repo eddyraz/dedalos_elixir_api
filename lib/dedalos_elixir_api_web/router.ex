@@ -15,7 +15,9 @@ defmodule DedalosElixirApiWeb.Router do
   end
 
 
-  resources "/opac_libros", LibrosController, except: [:new, :edit]
+  resources "/get_all_libros", LibrosController,  except: [:new, :edit]
+
+  post "/list_libros", LibrosController, :index
 
   resources "/get_libro", LibrosController, except: [:new, :edit]
 
