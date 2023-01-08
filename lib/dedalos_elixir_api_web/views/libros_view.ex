@@ -24,7 +24,7 @@ defmodule DedalosElixirApiWeb.LibrosView do
       título: libros.título,
       edición: libros.edición,
       año_impr: libros.año_impr,
-      idioma_id: libros.idioma_id,
+      idioma: libros.idioma_id,
       localización: libros.localización,
       resumen: libros.resumen,
       baja: libros.baja,
@@ -34,12 +34,10 @@ defmodule DedalosElixirApiWeb.LibrosView do
       tipo_de_soporte: libros.tipo_soporte_id,
       editorial: libros.editorial_id,
       colección: libros.colección_id,
-      #autor: libros.autor,
-      #autor2: libros.autor2,
       autor2_id: libros.autor2_id,
       autor_id: libros.autor_id,
-      ciudad: libros.ciudad,
       autor3_id: libros.autor3_id,
+      ciudad: libros.ciudad,
       lugar_de_impresión: libros.lugar_de_impresión_id,
       tipo_soporte_id: libros.tipo_soporte_id
     }

@@ -11,6 +11,7 @@ defmodule DedalosElixirApi.Opac do
   alias DedalosElixirApi.Opac.Coleccion
   alias DedalosElixirApi.Opac.Autor
   alias DedalosElixirApi.Opac.Ciudad
+  alias DedalosElixirApi.Opac.Idioma
 
 
   def get_all_libros() do
@@ -24,19 +25,24 @@ defmodule DedalosElixirApi.Opac do
   end
 
   def get_libro(no_reg) do
-    Ecto.Query.from(l in Libros,join: e in Editorial,
-     on:  l."editorial_id" == e.id, where: l."no_reg" == ^no_reg,
+    Ecto.Query.from(l in Libros,
+     join: e in Editorial, on:  l."editorial_id" == e.id, where: l."no_reg" == ^no_reg,
      join: c in Ciudad, on: l."lugar_de_impresión_id" == c.id,
      join: a in Autor, on: l."autor_id" == a.id,
+     join: a2 in Autor, on: l."autor2_id" == a2.id,
+     join: a3 in Autor, on: l."autor3_id" == a3.id,
+
+
+     join: clx in Coleccion, on: l."colección_id" == clx.id,
+     join: i in Idioma, on: l."idioma_id" == i.id,
      select: %{
       no_reg: l.no_reg,
-
       signatura: l.signatura,
       fecha_registro: l.fecha_registro,
       título: l.título,
       edición: l.edición,
       año_impr: l.año_impr,
-      idioma_id: l.idioma_id,
+      idioma_id: i.idioma,
       localización: l.localización,
       resumen: l.resumen,
       baja: l.baja,
@@ -45,16 +51,14 @@ defmodule DedalosElixirApi.Opac do
       isbn: l.isbn,
       tipo_soporte_id: l.tipo_soporte_id,
       editorial_id: e.nombre_editorial,
-      colección_id: l.colección_id,
-      autor: a.nombre_autor,
-      autor2: l.autor2,
-      autor2_id: l.autor2_id,
-      autor_id: l.autor_id,
+      colección_id: clx.nombre_coleccion,
+      autor2_id: a2.nombre_autor,
+      autor_id: a.nombre_autor,
+      autor3_id: a3.nombre_autor,
       ciudad: l.ciudad,
-      autor3_id: l.autor3_id,
       lugar_de_impresión_id: c.nombre_ciudad
       })
-    #|> Ecto.Query.from([l,e] in , select: {})
+
     |> Repo.all()
     #Repo.get(Libros,no_reg)
 
@@ -443,5 +447,197 @@ defmodule DedalosElixirApi.Opac do
   """
   def change_autor(%Autor{} = autor, attrs \\ %{}) do
     Autor.changeset(autor, attrs)
+  end
+
+  alias DedalosElixirApi.Opac.Coleccion
+
+  @doc """
+  Returns the list of opac_coleccion.
+
+  ## Examples
+
+      iex> list_opac_coleccion()
+      [%Coleccion{}, ...]
+
+  """
+  def list_opac_coleccion do
+    Repo.all(Coleccion)
+  end
+
+  @doc """
+  Gets a single coleccion.
+
+  Raises `Ecto.NoResultsError` if the Coleccion does not exist.
+
+  ## Examples
+
+      iex> get_coleccion!(123)
+      %Coleccion{}
+
+      iex> get_coleccion!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_coleccion!(id), do: Repo.get!(Coleccion, id)
+
+  @doc """
+  Creates a coleccion.
+
+  ## Examples
+
+      iex> create_coleccion(%{field: value})
+      {:ok, %Coleccion{}}
+
+      iex> create_coleccion(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_coleccion(attrs \\ %{}) do
+    %Coleccion{}
+    |> Coleccion.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a coleccion.
+
+  ## Examples
+
+      iex> update_coleccion(coleccion, %{field: new_value})
+      {:ok, %Coleccion{}}
+
+      iex> update_coleccion(coleccion, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_coleccion(%Coleccion{} = coleccion, attrs) do
+    coleccion
+    |> Coleccion.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a coleccion.
+
+  ## Examples
+
+      iex> delete_coleccion(coleccion)
+      {:ok, %Coleccion{}}
+
+      iex> delete_coleccion(coleccion)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_coleccion(%Coleccion{} = coleccion) do
+    Repo.delete(coleccion)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking coleccion changes.
+
+  ## Examples
+
+      iex> change_coleccion(coleccion)
+      %Ecto.Changeset{data: %Coleccion{}}
+
+  """
+  def change_coleccion(%Coleccion{} = coleccion, attrs \\ %{}) do
+    Coleccion.changeset(coleccion, attrs)
+  end
+
+  alias DedalosElixirApi.Opac.Idioma
+
+  @doc """
+  Returns the list of opac_idioma.
+
+  ## Examples
+
+      iex> list_opac_idioma()
+      [%Idioma{}, ...]
+
+  """
+  def list_opac_idioma do
+    Repo.all(Idioma)
+  end
+
+  @doc """
+  Gets a single idioma.
+
+  Raises `Ecto.NoResultsError` if the Idioma does not exist.
+
+  ## Examples
+
+      iex> get_idioma!(123)
+      %Idioma{}
+
+      iex> get_idioma!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_idioma!(id), do: Repo.get!(Idioma, id)
+
+  @doc """
+  Creates a idioma.
+
+  ## Examples
+
+      iex> create_idioma(%{field: value})
+      {:ok, %Idioma{}}
+
+      iex> create_idioma(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_idioma(attrs \\ %{}) do
+    %Idioma{}
+    |> Idioma.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a idioma.
+
+  ## Examples
+
+      iex> update_idioma(idioma, %{field: new_value})
+      {:ok, %Idioma{}}
+
+      iex> update_idioma(idioma, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def update_idioma(%Idioma{} = idioma, attrs) do
+    idioma
+    |> Idioma.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a idioma.
+
+  ## Examples
+
+      iex> delete_idioma(idioma)
+      {:ok, %Idioma{}}
+
+      iex> delete_idioma(idioma)
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def delete_idioma(%Idioma{} = idioma) do
+    Repo.delete(idioma)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking idioma changes.
+
+  ## Examples
+
+      iex> change_idioma(idioma)
+      %Ecto.Changeset{data: %Idioma{}}
+
+  """
+  def change_idioma(%Idioma{} = idioma, attrs \\ %{}) do
+    Idioma.changeset(idioma, attrs)
   end
 end

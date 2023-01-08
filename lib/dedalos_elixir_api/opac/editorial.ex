@@ -8,7 +8,7 @@ defmodule DedalosElixirApi.Opac.Editorial do
     field :pais_origen_id, :integer
 
     #Associations
-    has_many :libros, Libros.Editorial_Iad
+    has_many :libros, Libros.Editorial_Id
 
     timestamps()
   end

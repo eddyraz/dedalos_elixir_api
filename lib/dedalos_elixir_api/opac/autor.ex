@@ -7,7 +7,7 @@ defmodule DedalosElixirApi.Opac.Autor do
     field :nombre_autor, :string
 
     #Associations
-    has_many :libros , Libros.Autor
+    has_many :libros , Libros.Autor_Id
 
 
     timestamps()

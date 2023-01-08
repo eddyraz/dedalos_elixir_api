@@ -288,4 +288,116 @@ defmodule DedalosElixirApi.OpacTest do
       assert %Ecto.Changeset{} = Opac.change_autor(autor)
     end
   end
+
+  describe "opac_coleccion" do
+    alias DedalosElixirApi.Opac.Coleccion
+
+    import DedalosElixirApi.OpacFixtures
+
+    @invalid_attrs %{id: nil, nombre_coleccion: nil}
+
+    test "list_opac_coleccion/0 returns all opac_coleccion" do
+      coleccion = coleccion_fixture()
+      assert Opac.list_opac_coleccion() == [coleccion]
+    end
+
+    test "get_coleccion!/1 returns the coleccion with given id" do
+      coleccion = coleccion_fixture()
+      assert Opac.get_coleccion!(coleccion.id) == coleccion
+    end
+
+    test "create_coleccion/1 with valid data creates a coleccion" do
+      valid_attrs = %{id: 42, nombre_coleccion: "some nombre_coleccion"}
+
+      assert {:ok, %Coleccion{} = coleccion} = Opac.create_coleccion(valid_attrs)
+      assert coleccion.id == 42
+      assert coleccion.nombre_coleccion == "some nombre_coleccion"
+    end
+
+    test "create_coleccion/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Opac.create_coleccion(@invalid_attrs)
+    end
+
+    test "update_coleccion/2 with valid data updates the coleccion" do
+      coleccion = coleccion_fixture()
+      update_attrs = %{id: 43, nombre_coleccion: "some updated nombre_coleccion"}
+
+      assert {:ok, %Coleccion{} = coleccion} = Opac.update_coleccion(coleccion, update_attrs)
+      assert coleccion.id == 43
+      assert coleccion.nombre_coleccion == "some updated nombre_coleccion"
+    end
+
+    test "update_coleccion/2 with invalid data returns error changeset" do
+      coleccion = coleccion_fixture()
+      assert {:error, %Ecto.Changeset{}} = Opac.update_coleccion(coleccion, @invalid_attrs)
+      assert coleccion == Opac.get_coleccion!(coleccion.id)
+    end
+
+    test "delete_coleccion/1 deletes the coleccion" do
+      coleccion = coleccion_fixture()
+      assert {:ok, %Coleccion{}} = Opac.delete_coleccion(coleccion)
+      assert_raise Ecto.NoResultsError, fn -> Opac.get_coleccion!(coleccion.id) end
+    end
+
+    test "change_coleccion/1 returns a coleccion changeset" do
+      coleccion = coleccion_fixture()
+      assert %Ecto.Changeset{} = Opac.change_coleccion(coleccion)
+    end
+  end
+
+  describe "opac_idioma" do
+    alias DedalosElixirApi.Opac.Idioma
+
+    import DedalosElixirApi.OpacFixtures
+
+    @invalid_attrs %{id: nil, idioma: nil}
+
+    test "list_opac_idioma/0 returns all opac_idioma" do
+      idioma = idioma_fixture()
+      assert Opac.list_opac_idioma() == [idioma]
+    end
+
+    test "get_idioma!/1 returns the idioma with given id" do
+      idioma = idioma_fixture()
+      assert Opac.get_idioma!(idioma.id) == idioma
+    end
+
+    test "create_idioma/1 with valid data creates a idioma" do
+      valid_attrs = %{id: 42, idioma: "some idioma"}
+
+      assert {:ok, %Idioma{} = idioma} = Opac.create_idioma(valid_attrs)
+      assert idioma.id == 42
+      assert idioma.idioma == "some idioma"
+    end
+
+    test "create_idioma/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Opac.create_idioma(@invalid_attrs)
+    end
+
+    test "update_idioma/2 with valid data updates the idioma" do
+      idioma = idioma_fixture()
+      update_attrs = %{id: 43, idioma: "some updated idioma"}
+
+      assert {:ok, %Idioma{} = idioma} = Opac.update_idioma(idioma, update_attrs)
+      assert idioma.id == 43
+      assert idioma.idioma == "some updated idioma"
+    end
+
+    test "update_idioma/2 with invalid data returns error changeset" do
+      idioma = idioma_fixture()
+      assert {:error, %Ecto.Changeset{}} = Opac.update_idioma(idioma, @invalid_attrs)
+      assert idioma == Opac.get_idioma!(idioma.id)
+    end
+
+    test "delete_idioma/1 deletes the idioma" do
+      idioma = idioma_fixture()
+      assert {:ok, %Idioma{}} = Opac.delete_idioma(idioma)
+      assert_raise Ecto.NoResultsError, fn -> Opac.get_idioma!(idioma.id) end
+    end
+
+    test "change_idioma/1 returns a idioma changeset" do
+      idioma = idioma_fixture()
+      assert %Ecto.Changeset{} = Opac.change_idioma(idioma)
+    end
+  end
 end

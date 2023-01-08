@@ -81,4 +81,34 @@ defmodule DedalosElixirApi.OpacFixtures do
 
     autor
   end
+
+  @doc """
+  Generate a coleccion.
+  """
+  def coleccion_fixture(attrs \\ %{}) do
+    {:ok, coleccion} =
+      attrs
+      |> Enum.into(%{
+        id: 42,
+        nombre_coleccion: "some nombre_coleccion"
+      })
+      |> DedalosElixirApi.Opac.create_coleccion()
+
+    coleccion
+  end
+
+  @doc """
+  Generate a idioma.
+  """
+  def idioma_fixture(attrs \\ %{}) do
+    {:ok, idioma} =
+      attrs
+      |> Enum.into(%{
+        id: 42,
+        idioma: "some idioma"
+      })
+      |> DedalosElixirApi.Opac.create_idioma()
+
+    idioma
+  end
 end
