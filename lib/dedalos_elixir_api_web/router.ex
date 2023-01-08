@@ -1,6 +1,7 @@
 defmodule DedalosElixirApiWeb.Router do
+  alias DedalosElixirApiWeb.LibrosController
   use DedalosElixirApiWeb, :router
-  
+
 
   pipeline :api do
     plug :accepts, ["json"]
@@ -9,11 +10,17 @@ defmodule DedalosElixirApiWeb.Router do
   scope "/api", DedalosElixirApiWeb do
     pipe_through :api
 
-    resources "/opac_libros", LibrosController, except: [:new, :edit]
-    
+
+
   end
 
-  
+
+  resources "/get_all_libros", LibrosController,  except: [:new, :edit]
+
+  post "/list_libros", LibrosController, :index
+
+  resources "/get_libro", LibrosController, except: [:new, :edit]
+
 
 
   # Enables LiveDashboard only for development

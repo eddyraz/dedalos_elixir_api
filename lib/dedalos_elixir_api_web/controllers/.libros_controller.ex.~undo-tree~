@@ -1,5 +1,5 @@
 (undo-tree-save-format-version . 1)
-"d57fb1ecf887fd838c1357ae77c92762537ac27d"
+"a1a26726ce6e553c8ff8e7f66f1a7ee5438f8bc3"
 [nil nil nil nil (25527 18852 328662 994000) 0 nil]
 ([nil nil ((377 . 378) (t 25527 18646 394998 294000)) nil (25527 18852 328661 108000) 0 nil])
 ([nil nil ((430 . 431)) nil (25527 18852 328658 245000) 0 nil])
@@ -8,5 +8,36 @@
 ([nil nil ((549 . 550)) nil (25527 18852 328652 518000) 0 nil])
 ([nil nil ((628 . 629)) nil (25527 18852 328650 632000) 0 nil])
 ([nil nil ((674 . 675)) nil (25527 18852 328647 838000) 0 nil])
-([nil current ((683 . 684)) nil (25527 18852 328642 181000) 0 nil])
+([nil nil ((683 . 684)) nil (25527 18852 328642 181000) 0 nil])
+([nil nil ((#("i" 0 1 (fontified t face font-lock-string-face)) . -711) (undo-tree-id8 . -1) (#("d" 0 1 (fontified t face font-lock-string-face)) . -712) (undo-tree-id9 . -1) 713 (t 25527 38214 0 0)) nil (25527 47922 246168 489000) 0 nil])
+([nil nil ((711 . 717)) nil (25527 47922 246159 898000) 0 nil])
+([nil nil ((#("-" 0 1 (fontified t face font-lock-string-face)) . -713) (undo-tree-id4 . -1) (#("r" 0 1 (fontified t face font-lock-string-face)) . -714) (undo-tree-id5 . -1) (#("e" 0 1 (fontified t face font-lock-string-face)) . -715) (undo-tree-id6 . -1) (#("g" 0 1 (fontified t face font-lock-string-face)) . -716) (undo-tree-id7 . -1) 717) nil (25527 47922 246153 752000) 0 nil])
+([nil nil ((713 . 717)) nil (25527 47922 246141 390000) 0 nil])
+([nil nil ((#("i" 0 1 (fontified t)) . -722) (undo-tree-id2 . -1) (#("d" 0 1 (fontified t)) . -723) (undo-tree-id3 . -1) 724) nil (25527 47922 246136 571000) 0 nil])
+([nil nil ((722 . 728)) nil (25527 47922 246128 888000) 0 nil])
+([nil nil ((#("i" 0 1 (fontified t)) . -764) (undo-tree-id0 . -1) (#("d" 0 1 (fontified t)) . -765) (undo-tree-id1 . -1) 766) nil (25527 47922 246121 834000) 0 nil])
+([nil nil ((764 . 770)) nil (25527 47922 246084 188000) 0 nil])
+([nil nil ((692 . 694) (#("  " 0 2 (fontified nil)) . 691) (undo-tree-id10 . -2) (691 . 694) (#("  " 0 2 (face font-lock-comment-face fontified nil)) . 690) (690 . 692) (690 . 691) (t 25527 47922 254661 791000)) nil (25528 18268 880096 876000) 0 nil])
+([nil nil ((692 . 694) (#("  " 0 2 (fontified nil)) . 691) (691 . 693) (691 . 692)) nil (25528 18268 880087 796000) 0 nil])
+([nil nil ((694 . 696)) nil (25528 18268 880082 628000) 0 nil])
+([nil nil ((#("e" 0 1 (fontified t)) . -695) (undo-tree-id9 . -1) 696) nil (25528 18268 880077 809000) 0 nil])
+([nil nil ((695 . 697)) nil (25528 18268 880070 266000) 0 nil])
+([nil nil ((#("d" 0 1 (fontified t)) . -694) (undo-tree-id0 . -1) (undo-tree-id1 . -1) (undo-tree-id2 . -1) (undo-tree-id3 . -1) (#("e" 0 1 (fontified t)) . -695) (undo-tree-id4 . -1) (undo-tree-id5 . -1) (undo-tree-id6 . -1) (#("f" 0 1 (face font-lock-keyword-face fontified t)) . -696) (undo-tree-id7 . -1) (undo-tree-id8 . -1) 697) nil (25528 18268 880059 161000) 0 nil])
+([nil nil ((#("  def update(conn, %{\"id\" => id, \"libros\" => libros_params}) do
+    libros = Opac.get_libros!(id)
+
+    with {:ok, %Libros{} = libros} <- Opac.update_libros(libros, libros_params) do
+      render(conn, \"show.json\", libros: libros)
+    end
+  end
+
+  def delete(conn, %{\"id\" => id}) do
+    libros = Opac.get_libros!(id)
+
+    with {:ok, %Libros{}} <- Opac.delete_libros(libros) do
+      send_resp(conn, :no_content, \"\")
+    end
+  end" 0 2 (fontified t) 2 5 (fontified t face font-lock-keyword-face) 5 6 (fontified t) 6 12 (fontified t face font-lock-function-name-face) 12 21 (fontified t) 21 22 (fontified t syntax-table (15) face font-lock-string-face) 22 24 (fontified t face font-lock-string-face) 24 25 (fontified t syntax-table (15) face font-lock-string-face) 25 33 (fontified t) 33 34 (fontified t syntax-table (15) face font-lock-string-face) 34 40 (fontified t face font-lock-string-face) 40 41 (fontified t syntax-table (15) face font-lock-string-face) 41 61 (fontified t) 61 63 (fontified t face font-lock-keyword-face) 63 68 (fontified t) 68 74 (fontified t face font-lock-variable-name-face) 74 77 (fontified t) 77 81 (fontified t face font-lock-type-face) 81 103 (fontified t) 103 107 (fontified t face font-lock-keyword-face) 107 109 (fontified t) 109 112 (fontified t face elixir-atom-face) 112 114 (fontified t) 114 121 (fontified t face font-lock-type-face) 121 137 (fontified t) 137 141 (fontified t face font-lock-type-face) 141 174 (fontified t) 174 179 (fontified t) 179 181 (fontified t face font-lock-keyword-face) 181 182 (fontified t) 182 201 (fontified t) 201 202 (fontified t syntax-table (15) face font-lock-string-face) 202 211 (fontified t face font-lock-string-face) 211 212 (fontified t syntax-table (15) face font-lock-string-face) 212 214 (fontified t) 214 221 (fontified t face elixir-atom-face) 221 234 (fontified t) 234 237 (fontified t face font-lock-keyword-face) 237 240 (fontified t) 240 243 (fontified t face font-lock-keyword-face) 243 247 (fontified t) 247 250 (fontified t face font-lock-keyword-face) 250 251 (fontified t) 251 257 (fontified t face font-lock-function-name-face) 257 266 (fontified t) 266 267 (fontified t syntax-table (15) face font-lock-string-face) 267 269 (fontified t face font-lock-string-face) 269 270 (fontified t syntax-table (15) face font-lock-string-face) 270 279 (fontified t) 279 281 (fontified t face font-lock-keyword-face) 281 286 (fontified t) 286 292 (fontified t face font-lock-variable-name-face) 292 295 (fontified t) 295 299 (fontified t face font-lock-type-face) 299 321 (fontified t) 321 325 (fontified t face font-lock-keyword-face) 325 327 (fontified t) 327 330 (fontified t face elixir-atom-face) 330 332 (fontified t) 332 339 (fontified t face font-lock-type-face) 339 346 (fontified t) 346 350 (fontified t face font-lock-type-face) 350 373 (fontified t) 373 375 (fontified t face font-lock-keyword-face) 375 398 (fontified t) 398 409 (fontified t face elixir-atom-face) 409 411 (fontified t) 411 412 (fontified t syntax-table (15) face font-lock-string-face) 412 413 (fontified t syntax-table (15) face font-lock-string-face) 413 419 (fontified t) 419 422 (fontified t face font-lock-keyword-face) 422 425 (fontified t) 425 428 (fontified t face font-lock-keyword-face)) . -832) (undo-tree-id1 . -428) (undo-tree-id2 . -423) (undo-tree-id3 . -103) (undo-tree-id4 . -181) (undo-tree-id5 . -428) (undo-tree-id6 . 3) (undo-tree-id7 . -428) 1260 (t 25528 18268 889121 85000)) nil (25528 38869 434669 57000) 0 nil])
+([nil current ((#("
+" 0 1 (fontified t)) . 690) (undo-tree-id0 . -1)) nil (25528 38869 434644 263000) 0 nil])
 nil
